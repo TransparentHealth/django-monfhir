@@ -17,4 +17,3 @@ a non-exclusive, perpetual, worldwide, fully-paid-up, royalty-free license
 to use, modify, and redistribute, your contribution, whether in whole or in part. 
 You also grant Videntity Systems, Inc. the ability to sublicense your contribution. 
 This does not in any way prevent you from reusing your contribution in other projects.
-
