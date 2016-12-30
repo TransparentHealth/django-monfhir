@@ -1,8 +1,24 @@
 django-monfhir
 ==============
 
-Monfhir is a FHIR server based in Django. It uses a relational database to manage metadata 
-and a MongDB for FHIR resource storage.  MonFHIR is a JSON-only FHIR server at this time.
+django-mongfhit is a "batteries included" FHIR server written in Django. 
+This project is still in development an should be considered in alpha. Basic CRUD operations are functioning at this point.
+
+Features include:
+
+
+* **Document-Oriented Data Storage** - A Documented-oriented resource strorage - Monfhir uses the highly scaleable Document/NoSQL database MongoDB.
+* **OAuth2** - Monfhir has out-of-the-box support for OAuth2. See the  hhs_oauth_server project on https://github.com/transparenthealth for more information.
+* **"Me" Support** - Monfhir supports "me" use cases out-of-the-box.  Monfhir allows an authenticated user to access **only** his or her own information. For example: An patient accesses his or her own information (e.g. patient facing API or application. "Blue Button").
+* **User Interface** - Monfhir can be configured/administered via the Django admin.
+* **JSONSchema Support ** - Monfhir supports FHIR resource valiation via  JSONSchema. These schema valition rules can be applied as prerequisites to creating and/or updating FHIR resources on the seerver.
+* **Pure JSON** - Monfhir supports JSON only (not XML). This feature results in a simpler system while still adhering to the FHIR specification.
+
+
+MonFHIR can be configured via the Django admin web user interface.
+
+
+MonFHIR is a JSON-only FHIR server at this time.
 It supports OAuth2 when used in conjunction with
 https://github.com/TransparentHealth/hhs_oauth_server
 
