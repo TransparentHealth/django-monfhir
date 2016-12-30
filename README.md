@@ -2,7 +2,8 @@ django-monfhir
 ==============
 
 django-mongfhit is a "batteries included" FHIR server written in Django. 
-This project is still in development an should be considered in alpha. Basic CRUD operations are functioning at this point.
+This project is still in development. It should be considered alpha. 
+CRUD interactions are functioning at this point.
 
 Features include:
 
