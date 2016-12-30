@@ -11,7 +11,6 @@ from .read import read
 from apps.dot_ext.decorators import capability_protected_resource
 
 
-
 @require_POST
 @capability_protected_resource()
 def oauth_create(request, resource_type):
@@ -20,11 +19,10 @@ def oauth_create(request, resource_type):
     return HttpResponse(status=501)
 
 
-
 @capability_protected_resource()
 def oauth_read_or_update_or_delete(request, resource_type, id):
     """Route to read, update, or delete based on HTTP method FHIR Interaction"""
-     
+
     if request.method == 'GET':
         # Read
         return read(request, resource_type, id)
@@ -34,12 +32,10 @@ def oauth_read_or_update_or_delete(request, resource_type, id):
     elif request.method == 'DELETE':
         # delete
         return delete(request, resource_type, id)
-    #else:
+    # else:
     # Not supported.
     msg = "HTTP method %s not supported at this URL." % (request.method)
     return kickout_400(msg)
-
-
 
 
 @capability_protected_resource()
@@ -47,4 +43,3 @@ def oauth_view(request, resource_type):
     if request.method == "GET":
         return read(request, resource_type)
     return HttpResponse(status=501)
-
