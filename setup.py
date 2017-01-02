@@ -9,9 +9,9 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 
 setup(name="django-monfhir",
-      version="0.0.0.8",
+      version="0.0.0.9",
       license='GPL2', 
-      packages=['monfhir', 'monfhir.views', 'tests',],
+      packages=['monfhir', 'monfhir.views',],
       description="A FHIR Server as a reusable Django apps. (Requires MongoDB)",
       long_description=README,
       author="Alan Viars (contributions - Mark Scrimshire)",
@@ -19,8 +19,8 @@ setup(name="django-monfhir",
       url="https://github.com/transparenthealth/django-monfhir",
       download_url="https://github.com/transparenthealth/django-monfhir/tarball/master",
       install_requires=[
-        'django>1.8', 'django-oauth-toolkit',
-        'django-cors-headers', 'jsonschema', pymongo],
+        'django>1.8', 'django-oauth-toolkit-scopes-backend',
+        'django-cors-headers', 'jsonschema', 'pymongo'],
       include_package_data=True,
       scripts=[],
       classifiers=[
