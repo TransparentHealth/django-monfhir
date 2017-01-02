@@ -43,18 +43,23 @@ Include the direct URLconf in your project urls.py like this:
     url(r'^monfhir/', include('monfhir.urls')),
 
 
-Create your database tables.
+If you want to use oauth2, you need to be running hhs_oauth_server and then inlcude the urls like so:
+
+
+    url(r'^monfhir/', include('monfhir.oauth2_urls')),
+
+Create your database tables by running migratre
 
 
     python manage.py migrate
 
-Support a couple resource types by adding them in the admin or 
+You must add ther resoutrces and interaction types you wish to support.  This can be achieved via the Django admin.
+You can alSupport a couple resource types by adding them in the admin or 
 using the following command to activate `Practitioner` and `Organization`. 
 (You can also do this sort of thing via the Django admin.)
 
 
     python manage.py loaddata [your download path]/django-monfhir/monfhir/fixtures/provider-directory-resources.json
-
 
 Use the APIs. Visit http://127.0.0.1:8000/monfhir/hello to verify the installation.
 
