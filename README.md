@@ -17,7 +17,7 @@ Features include:
 
 
 
-Monfhir is in deveelopment.  Contributions/Pull requests welcome!
+Monfhir is in development.  Contributions/Pull requests welcome!
 
 
 Installation
